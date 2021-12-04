@@ -1,0 +1,36 @@
+<div class="details">
+    <div class="welcome">
+        <h1>Welcome to Crypto Dashboard</h1>
+    </div>
+    <p>Cryptocurrency coin information will be listed below:</p>
+    <h2>This is the ShowTicker Component</h2>
+    <p>Number of cryptocurrencies show below, inorder of rank 100</p>
+    <div class="details" *ngFor="let detail of details">
+        <h3>{{detail.id}}</h3>
+        <div>
+            Rank:{{detail.market_data.market_cap_rank}}
+        </div>
+        <div>
+
+            Symbol:{{detail.symbol}}
+        </div>
+        <div>
+            Ciculating Supply:{{detail.market_data.circulating_supply}}
+        </div>
+        <div>
+            Total Supply:
+        </div>
+        <div>
+            Maximum Supply:
+        </div>
+        <div>
+            Last updated:{{detail.last_updated|date}}
+        </div>
+        <h3>Quotas, in USD</h3>
+        <div>Price:${{detail.market_data.current_price.usd}}</div>
+        <div>Percentage change 1yr:{{detail.market_data.price_change_percentage_1y_in_currency.usd}} </div>
+        <div>Percentage change 7d:${{detail.market_data.price_change_percentage_7d_in_currency.usd}}</div>
+        <div>Percentage change 24hr:${{detail.market_data.price_change_percentage_24h_in_currency.usd}}</div>
+        <div>Volume:</div>
+    </div>
+</div>
